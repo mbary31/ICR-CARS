@@ -36,3 +36,6 @@ a{color:#111;text-decoration:none}
 .toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:#111;color:#fff;padding:8px 12px;border-radius:999px;opacity:0;transition:.3s}
 .toast.show{opacity:1}
 @media (max-width:980px){ .cards{grid-template-columns:1fr} .grid.two,.grid.three{grid-template-columns:1fr} .detalle{grid-template-columns:1fr}}
+/* PATCH: RS3 banner on home */
+.hero-banner{padding-top:6px}
+.hero-banner img{width:100%;max-height:420px;object-fit:contain;border-radius:16px;background:#fff;border:1px solid var(--line)}
