@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>ICR CARS · Concesionario Boutique</title>
+  <meta name="description" content="ICR CARS — Vehículos deportivos seleccionados con garantía y confianza. 15 años de experiencia.">
+  <link rel="icon" href="logo_icr.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="index.html">
+      <img src="logo_icr.jpg" alt="ICR CARS logo">
+      <span>ICR CARS</span>
+    </a>
+    <nav>
+      <a href="vehiculos.html">Vehículos</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="contacto.html">Contacto</a>
+      <a id="adminNav" class="btn-outline" href="admin.html" hidden>Admin</a>
+    </nav>
+  </header>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>Panel de administración</h2>
+      <p>Acceso restringido — solo personal de ICR.</p>
+    </div>
+
+    <form id="loginForm" class="admin-form">
+      <input id="pin" type="password" placeholder="PIN de administrador">
+      <button class="btn" type="submit">Entrar</button>
+      <button class="btn-outline" type="button" id="btnLogout">Salir</button>
+      <p class="meta">Tras iniciar sesión, podrás añadir y borrar vehículos.</p>
+    </form>
+
+    <form id="formVehiculo" class="admin-form" hidden>
+      <div class="grid two">
+        <div><label>Marca</label><input required name="marca" placeholder="SEAT, Audi, VW…"></div>
+        <div><label>Modelo</label><input required name="modelo" placeholder="Leon Cupra, S3…"></div>
+        <div><label>Año</label><input required type="number" name="ano" placeholder="2018"></div>
+        <div><label>Kilómetros</label><input required type="number" name="km" placeholder="52000"></div>
+        <div><label>Precio (€)</label><input required type="number" name="precio" placeholder="19990"></div>
+        <div><label>Combustible</label><input name="combustible" placeholder="Gasolina, Diésel…"></div>
+        <div><label>Potencia (CV)</label><input name="potencia" type="number" placeholder="300"></div>
+        <div><label>Transmisión</label><input name="cambio" placeholder="Manual / Automático"></div>
+        <div><label>Color</label><input name="color" placeholder="Gris, Blanco…"></div>
+      </div>
+      <label>Descripción</label>
+      <textarea name="descripcion" rows="6" placeholder="Estado, mantenimiento, extras…"></textarea>
+
+      <label>Fotos (hasta 12)</label>
+      <input id="inputFotos" type="file" accept="image/*" multiple>
+
+      <div class="actions">
+        <button class="btn" type="submit">Guardar vehículo</button>
+        <button class="btn-outline" type="button" id="btnBorrarTodo">Borrar todo</button>
+      </div>
+
+      <div class="actions">
+        <button class="btn-outline" id="btnExportar">Exportar JSON</button>
+        <input type="file" id="inputImportar" accept="application/json" hidden>
+        <button class="btn-outline" id="btnImportar">Importar JSON</button>
+      </div>
+    </form>
+
+    <section class="section">
+      <h3>Tu inventario (reales)</h3>
+      <div id="adminListado" class="cards"></div>
+    </section>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h4>ICR CARS</h4>
+        <p>Vehículos deportivos seleccionados con garantía y confianza. 15 años de experiencia.</p>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <p>
+          Tel: +34 602 438 229<br>
+          Email: <a href="mailto:cochesycasasia@gmail.com">cochesycasasia@gmail.com</a><br>
+          Madrid, España
+        </p>
+      </div>
+      <div>
+        <h4>Horario</h4>
+        <p>Lun–Vie 09:00–19:00<br>Sáb 10:00–14:00</p>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <p><a href="#">Aviso legal</a> · <a href="#">Privacidad</a> · <a href="#">Cookies</a></p>
+      </div>
+    </div>
+    <p class="copy">© 2025 ICR CARS. Todos los derechos reservados.</p>
+  </footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
