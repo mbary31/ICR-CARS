@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ICR CARS Barcelona</title>
+  <link rel="icon" href="logo_icr.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="index.html"><img src="logo_icr.jpg" alt="ICR CARS"><span>ICR CARS</span></a>
+  <nav>
+    <a href="vehiculos.html">Vehículos</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="contacto.html">Contacto</a>
+    <a id="adminLink" href="admin.html" hidden>Admin</a>
+  </nav>
+</header>
+
+<section class="wrap">
+  <h2>Vehículos</h2>
+  <p class="muted">Arriba: ejemplos decorativos (no a la venta). Abajo: tu stock real.</p>
+
+  <h3 class="muted small">Destacados (decoración)</h3>
+  <div id="ejemplo" class="cards"></div>
+
+  <div class="filters">
+    <input id="q" type="search" placeholder="Buscar por marca, modelo, combustible…">
+    <select id="orden">
+      <option value="nuevo">Más recientes</option>
+      <option value="precioAsc">Precio ↑</option>
+      <option value="precioDesc">Precio ↓</option>
+      <option value="kmAsc">Kilómetros ↑</option>
+    </select>
+  </div>
+  <div id="lista" class="cards"></div>
+  <div id="vacio" class="empty" hidden>No hay vehículos todavía.</div>
+</section>
+
+<footer class="foot">
+  <div class="wrap grid">
+    <div>
+      <h4>ICR CARS</h4>
+      <p>Vehículos deportivos seleccionados con garantía y confianza. 15 años de experiencia.</p>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <p>Tel: +34 602 438 229<br>Email: <a href="mailto:cochesycasasia@gmail.com">cochesycasasia@gmail.com</a><br>Barcelona, España</p>
+    </div>
+    <div>
+      <h4>Horario</h4>
+      <p>Lun–Vie 09:00–19:00 · Sáb 10:00–14:00</p>
+    </div>
+    <div>
+      <h4>Legal</h4>
+      <p><a href="#">Aviso legal</a> · <a href="#">Privacidad</a> · <a href="#">Cookies</a></p>
+    </div>
+  </div>
+  <p class="copy">© 2025 ICR CARS</p>
+</footer>
+<div class="toast" id="toast"></div>
+</body>
+</html>
