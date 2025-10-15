@@ -1,13 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ICR CARS Barcelona</title>
+  <title>ICR CARS Barcelona — Admin</title>
   <link rel="icon" href="logo_icr.jpg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script defer src="app.js"></script>
 </head>
@@ -43,7 +41,9 @@
       <input name="color" placeholder="Color">
     </div>
     <textarea name="descripcion" placeholder="Descripción"></textarea>
-    <label>Fotos (hasta 12) <input id="fotos" type="file" accept="image/*" multiple></label>
+    <label>Fotos (hasta 6 en modo local)
+      <input id="fotos" type="file" accept="image/*" multiple>
+    </label>
     <div class="cta">
       <button class="btn">Guardar vehículo</button>
       <button id="purge" class="btn-outline" type="button">Solo borrar local</button>
@@ -53,24 +53,6 @@
   <h3>Inventario</h3>
   <div id="adminLista" class="cards"></div>
 </section>
-
-<footer class="foot">
-  <div class="wrap grid">
-    <div>
-      <h4>ICR CARS</h4>
-      <p>Concesionario boutique con 15 años de experiencia. Calidad, transparencia y servicio postventa.</p>
-    </div>
-    <div>
-      <h4>Contacto</h4>
-      <p>Tel: +34 602 438 229<br>Email: <a href="mailto:cochesycasasia@gmail.com">cochesycasasia@gmail.com</a><br>Barcelona</p>
-    </div>
-    <div>
-      <h4>Horario</h4>
-      <p>Lun–Vie 09:00–19:00 · Sáb 10:00–14:00</p>
-    </div>
-  </div>
-  <p class="copy">© 2025 ICR CARS</p>
-</footer>
 <div class="toast" id="toast"></div>
 </body>
 </html>
