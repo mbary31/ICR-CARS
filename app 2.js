@@ -1,4 +1,29 @@
 
+// PATCH: migrate old keys so previous cars reappear
+(function migrateKeys(){
+  try{
+    const CURRENT='icr_stock_v1';
+    const oldKeys=['icr_vehiculos_pro','icr_inventario','icr_vehiculos','icr_stock_v1_bak'];
+    const existing = JSON.parse(localStorage.getItem(CURRENT)||'[]');
+    let merged = existing.slice();
+    for(const k of oldKeys){
+      const raw = localStorage.getItem(k);
+      if(!raw) continue;
+      try{
+        const arr = JSON.parse(raw);
+        if(Array.isArray(arr)){
+          // prepend older arrays so latest stay on top
+          merged = arr.concat(merged);
+        }
+        localStorage.removeItem(k);
+      }catch{}
+    }
+    if(merged.length !== existing.length){
+      localStorage.setItem(CURRENT, JSON.stringify(merged));
+      console.info('ICR migrate: merged old keys →', merged.length, 'items');
+    }
+  }catch(e){ console.warn('ICR migrate failed', e); }
+})();
 // ===== Config (igual) =====
 const ADMIN_PIN='602438229';
 const KEY='icr_stock_v1';
