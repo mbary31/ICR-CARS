@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ICR CARS Barcelona</title>
+  <link rel="icon" href="logo_icr.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="index.html"><img src="logo_icr.jpg" alt="ICR CARS"><span>ICR CARS</span></a>
+  <nav>
+    <a href="vehiculos.html">Vehículos</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="contacto.html">Contacto</a>
+    <a id="adminLink" href="admin.html" hidden>Admin</a>
+  </nav>
+</header>
+
+<section class="wrap hero-min">
+  <div class="col">
+    <h1>Concesionario boutique con más de 15 años de experiencia en vehículos de alta gama.</h1>
+    <div class="cta">
+      <a class="btn" href="vehiculos.html">Ver vehículos</a>
+      <button class="btn-outline" id="quickLogin">Soy ICR</button>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>Último en stock</h2>
+  <div id="ultimo" class="cards one"></div>
+</section>
+
+<footer class="foot">
+  <div class="wrap grid">
+    <div>
+      <h4>ICR CARS</h4>
+      <p>Concesionario boutique con 15 años de experiencia. Calidad, transparencia y servicio postventa.</p>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <p>Tel: +34 602 438 229<br>Email: <a href="mailto:cochesycasasia@gmail.com">cochesycasasia@gmail.com</a><br>Barcelona</p>
+    </div>
+    <div>
+      <h4>Horario</h4>
+      <p>Lun–Vie 09:00–19:00 · Sáb 10:00–14:00</p>
+    </div>
+  </div>
+  <p class="copy">© 2025 ICR CARS</p>
+</footer>
+<div class="toast" id="toast"></div>
+</body>
+</html>
