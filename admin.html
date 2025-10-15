@@ -23,30 +23,44 @@
   </nav>
 </header>
 
-<section class="wrap hero">
-  <div class="hero-copy">
-    <h1>Vehículos deportivos seleccionados con garantía y confianza.</h1>
-    <div class="cta">
-      <a class="btn" href="vehiculos.html">Ver vehículos</a>
-      <button class="btn-outline" id="quickLogin">Soy ICR</button>
-    </div>
-  </div>
-  <div class="hero-art">
-    <img class="hero-car" src="assets/seat_leon_cupra.webp" alt="SEAT Leon Cupra - ICR CARS">
-  </div>
-</section>
-
-<!-- BENEFICIOS como en el screenshot -->
-<section class="wrap benefits">
-  <div class="benefit">✓ 15 años de experiencia</div>
-  <div class="benefit">✓ Garantía europea hasta 24 meses</div>
-  <div class="benefit">✓ Historial certificado</div>
-  <div class="benefit">✓ Entrega a domicilio en toda España</div>
-</section>
-
 <section class="wrap">
-  <h2>Último en stock</h2>
-  <div id="ultimo" class="cards one"></div>
+  <h2>Panel (solo ICR)</h2>
+  <form id="login" class="form">
+    <input id="pin" type="password" placeholder="PIN">
+    <button class="btn">Entrar</button>
+    <button id="logout" class="btn-outline" type="button">Salir</button>
+  </form>
+
+  <form id="form" class="form" hidden>
+    <input type="hidden" id="vehId">
+    <div class="grid two">
+      <input name="marca" placeholder="Marca" required>
+      <input name="modelo" placeholder="Modelo" required>
+      <input name="ano" type="number" placeholder="Año" required>
+      <input name="km" type="number" placeholder="Kilómetros" required>
+      <input name="precio" type="number" placeholder="Precio (€)" required>
+      <input name="combustible" placeholder="Combustible">
+      <input name="potencia" type="number" placeholder="CV">
+      <input name="cambio" placeholder="Transmisión">
+      <input name="color" placeholder="Color">
+    </div>
+    <textarea name="descripcion" placeholder="Descripción (estado, mantenimiento, extras)"></textarea>
+
+    <div class="photos-manager">
+      <label>Fotos (hasta 12)
+        <input id="fotos" type="file" accept="image/*" multiple>
+      </label>
+      <div id="fotosList" class="thumbs"></div>
+    </div>
+
+    <div class="cta">
+      <button class="btn" id="saveBtn">Guardar</button>
+      <button class="btn-outline" id="newBtn" type="button">Nuevo</button>
+    </div>
+  </form>
+
+  <h3>Inventario</h3>
+  <div id="adminLista" class="cards"></div>
 </section>
 
 <footer class="foot">
